@@ -1,0 +1,53 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  border-top: solid 2px #8a8a8a;
+  border-bottom: solid 2px #8a8a8a;
+  padding: 8px 16px;
+  background-color: #d0fdff;
+  overflow: hidden;
+}
+
+.header__lside {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+}
+
+.header__rside {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+  gap: $middle-m-p;
+}
+
+.cart {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: #9a9a9a;
+  transition: transform, color 400ms ease;
+}
+
+.cart:hover {
+  transform: scale(1.1);
+  color: #000;
+}
+
+button.signout {
+  @include my-button;
+}
+
+.user__photo {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #8a8a8a;
+  border-radius: 50%;
+}

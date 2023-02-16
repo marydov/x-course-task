@@ -1,0 +1,45 @@
+@import './styles/mixins';
+@import './styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Mouse+Memoirs&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  @include vertical-list;
+  min-height: 100vh;
+  background-color: #eafdff;
+  color: #000;
+  font-family: 'Heebo', 'Mouse Memoirs', sans-serif;
+  font-weight: 400;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.error-message {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  top: 50%;
+  transform: translate(0, -50%);
+  font: 3em sans-serif;
+}
+
+footer {
+  flex-shrink: 0;
+  height: 56px;
+  text-align: center;
+  padding: $middle-m-p;
+}

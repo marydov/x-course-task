@@ -1,0 +1,21 @@
+@mixin my-button {
+  border: solid 1px #8a8a8a;
+  font-weight: bold;
+}
+
+@mixin center-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@mixin vertical-list {
+  display: flex;
+  flex-direction: column;
+}

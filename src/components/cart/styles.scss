@@ -1,0 +1,30 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.ordersContainer {
+  margin: 16px 8px;
+}
+
+.cart__container {
+  @include vertical-list;
+  position: relative;
+}
+
+button.purchase {
+  @include my-button;
+  float: right;
+  margin: $middle-m-p;
+}
+
+button.purchase:disabled {
+  background-color: #8a8a8a;
+}
+
+.empty__cart {
+  @include center-element;
+}
+
+.cart__img {
+  width: 160px;
+  height: 160px;
+}

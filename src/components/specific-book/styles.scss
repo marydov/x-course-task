@@ -1,0 +1,58 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+button.add__tocart {
+  @include my-button;
+}
+
+.user__photo {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #8a8a8a;
+  border-radius: 50%;
+}
+
+.book__page {
+  margin: $big-m-p;
+}
+
+.book__image,
+.book__information,
+.price__container {
+  width: 100%;
+}
+
+.book__information,
+.price__container {
+  padding: $middle-m-p;
+}
+
+.price__container {
+  border: dashed 1px #8a8a8a;
+  border-radius: 10px;
+  background-color: #d0fdff;
+}
+
+.book__price,
+.book__count,
+.book__totalprice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book__count-sum {
+  border-radius: 10px;
+}
+
+.book__price-sum,
+.book__totalprice-sum {
+  font-weight: bold;
+}
+
+.add__tocart {
+  float: right;
+}
+
+.book__page-description {
+  margin-top: $middle-m-p;
+}

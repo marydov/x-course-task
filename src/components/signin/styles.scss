@@ -1,0 +1,56 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.signin__container {
+  @include center-element;
+}
+
+.avatar__img {
+  width: 160px;
+  height: 160px;
+  margin-bottom: $middle-m-p;
+}
+
+.user__form {
+  @include vertical-list;
+  align-items: center;
+}
+
+.name,
+.submit {
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+input.submit {
+  @include my-button;
+  margin-top: $middle-m-p;
+}
+
+.submit:hover {
+  background-color: #d3d4d5;
+  border-color: #c6c7c8;
+}
+
+@media screen and (max-width: 320px) {
+  .signin__container {
+    position: relative;
+  }
+
+  .user__form {
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  .name,
+  .submit {
+    width: 100%;
+  }
+
+  .avatar__img {
+    width: 200px;
+    height: 200px;
+  }
+}

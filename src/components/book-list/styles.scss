@@ -1,0 +1,89 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.book__search {
+  margin: 32px 0 0 16px;
+  position: relative;
+  display: flex;
+}
+
+.search {
+  width: 400px;
+  height: 40px;
+  border-radius: $little-m-p;
+  border: solid 1px #8a8a8a;
+  padding-left: $little-m-p;
+}
+
+.magnifying_glass {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 365px;
+}
+
+.price {
+  width: 160px;
+  height: 40px;
+  border-radius: $little-m-p;
+  border: solid 1px #8a8a8a;
+  margin-left: 40px;
+}
+
+.content {
+  padding: $big-m-p;
+}
+
+.product {
+  margin-bottom: $big-m-p;
+}
+
+.card {
+  @include vertical-list;
+  min-height: 100%;
+  overflow: hidden;
+  margin: $middle-m-p;
+  padding: $middle-m-p;
+}
+
+.card__img {
+  max-height: 560px;
+  border-radius: $little-m-p;
+  flex-grow: 1;
+  transition: transform, box-shadow 350ms ease;
+}
+
+.card__img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 2px 1px #9a9a9a;
+}
+
+.card__book-footer {
+  margin-top: $little-m-p;
+  flex-shrink: 0;
+}
+
+.card__book-name,
+.card__book-author {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__book-name,
+.card__book-price {
+  font-weight: bold;
+}
+
+button.view {
+  @include my-button;
+  cursor: pointer;
+}
