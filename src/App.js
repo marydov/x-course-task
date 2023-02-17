@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/error-boundary';
-import SpecificBook from './components/specific-book';
-import Signin from './components/signin';
-import BookList from './components/book-list';
-import Cart from './components/cart';
+import SpecificBook from './components/specific-book/specific-book';
+import Signin from './components/signin/signin';
+import BookList from './components/book-list/book-list';
+import Cart from './components/cart/cart';
 import Layout from './routes/Layout';
 import NotFoundPage from './routes/NotFoundPage';
 import { User } from './context/use-user';
@@ -34,8 +34,6 @@ function App() {
   }, []);
 
   const [order, setOrder] = useState([]);
-
-  console.log(order);
 
   return (
     <>

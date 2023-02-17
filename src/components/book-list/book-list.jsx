@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import Select from 'react-select';
 import BookCard from '../book-card';
 import { User } from '../../context/use-user';
@@ -45,9 +45,6 @@ export default function BookList() {
   const searchBooks = currentBooks.filter((el) =>
     el.title.toLowerCase().includes(search.toLowerCase())
   );
-
-  console.log(currentBooks);
-  console.log(searchBooks);
 
   return (
     <>

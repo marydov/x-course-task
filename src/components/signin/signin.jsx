@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles.scss';
 import avatar from '../../images/avatar.png';

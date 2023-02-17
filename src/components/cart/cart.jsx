@@ -1,9 +1,9 @@
-import React, { useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User } from '../../context/use-user';
 import { Order } from '../../context/use-order';
 import { Col, Row } from 'react-bootstrap';
-import Orders from '../order';
+import Orders from '../order/order';
 import cart from '../../images/cart.svg';
 import './styles.scss';
 
@@ -47,18 +47,12 @@ export default function Cart() {
     count: order.reduce((prev, curr) => prev + curr.count, 0),
   });
 
-  console.log(total);
-  console.log(total.price);
-
   useEffect(() => {
     setTotal({
       price: order.reduce((prev, curr) => prev + curr.priceTotal, 0).toFixed(2),
       count: order.reduce((prev, curr) => prev + curr.count, 0),
     });
   }, [order]);
-
-  console.log(total.count);
-  console.log(total.price);
 
   const userName = useContext(User);
   const navigate = useNavigate();
