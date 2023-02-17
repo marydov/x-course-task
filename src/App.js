@@ -44,7 +44,7 @@ function App() {
               <BrowserRouter>
                 <Routes>
                   <Route
-                    path="/x-course-task"
+                    path="/x-course-task/"
                     element={<Layout setUserName={updateUserName} />}
                   >
                     <Route
