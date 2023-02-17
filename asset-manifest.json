@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/x-course-task/static/css/main.28b404bc.css",
-    "main.js": "/x-course-task/static/js/main.2ee66016.js",
+    "main.js": "/x-course-task/static/js/main.41ff3220.js",
     "static/media/magnifying-glass.png": "/x-course-task/static/media/magnifying-glass.329ebf59ca28975d606d.png",
     "static/media/avatar.png": "/x-course-task/static/media/avatar.0d14c6999b4a5c8e86a7.png",
     "static/media/imageNotFound.png": "/x-course-task/static/media/imageNotFound.298b98203c3825c61303.png",
     "static/media/cart.svg": "/x-course-task/static/media/cart.5a1c3c755c07e59db7d65be6bc8d8bfb.svg",
     "index.html": "/x-course-task/index.html",
     "main.28b404bc.css.map": "/x-course-task/static/css/main.28b404bc.css.map",
-    "main.2ee66016.js.map": "/x-course-task/static/js/main.2ee66016.js.map"
+    "main.41ff3220.js.map": "/x-course-task/static/js/main.41ff3220.js.map"
   },
   "entrypoints": [
     "static/css/main.28b404bc.css",
-    "static/js/main.2ee66016.js"
+    "static/js/main.41ff3220.js"
   ]
 }
