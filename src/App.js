@@ -44,7 +44,7 @@ function App() {
               <BrowserRouter>
                 <Routes>
                   <Route
-                    path="/x-course-task/"
+                    path="/"
                     element={<Layout setUserName={updateUserName} />}
                   >
                     <Route
@@ -56,16 +56,10 @@ function App() {
                         />
                       }
                     />
-                    <Route
-                      path="x-course-task/book-list/"
-                      element={<BookList />}
-                    />
-                    <Route
-                      path="x-course-task/book-list/:id"
-                      element={<SpecificBook />}
-                    />
-                    <Route path="x-course-task/cart" element={<Cart />} />
-                    <Route path="x-course-task/*" element={<NotFoundPage />} />
+                    <Route path="book-list/" element={<BookList />} />
+                    <Route path="book-list/:id" element={<SpecificBook />} />
+                    <Route path="cart" element={<Cart />} />
+                    <Route path="*" element={<NotFoundPage />} />
                   </Route>
                 </Routes>
               </BrowserRouter>
