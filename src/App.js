@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/error-boundary';
 import SpecificBook from './components/specific-book/specific-book';
 import Signin from './components/signin/signin';
@@ -41,7 +41,7 @@ function App() {
         <User.Provider value={userName}>
           <Order.Provider value={{ order, setOrder }}>
             <ErrorBoundary>
-              <BrowserRouter>
+              <HashRouter>
                 <Routes>
                   <Route
                     path="/"
@@ -62,7 +62,7 @@ function App() {
                     <Route path="*" element={<NotFoundPage />} />
                   </Route>
                 </Routes>
-              </BrowserRouter>
+              </HashRouter>
             </ErrorBoundary>
           </Order.Provider>
         </User.Provider>
