@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import './styles.scss';
+import './signin.scss';
 import avatar from '../../images/avatar.png';
 
 export default function Signin(props) {

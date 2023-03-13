@@ -5,7 +5,7 @@ import { User } from '../../context/use-user';
 import { Books } from '../../context/use-books';
 import { Order } from '../../context/use-order';
 import notFound from '../../images/imageNotFound.png';
-import './styles.scss';
+import './specific-book.scss';
 
 export default function SpecificBook() {
   const userName = useContext(User);

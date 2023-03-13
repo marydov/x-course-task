@@ -56,8 +56,8 @@ function App() {
                         />
                       }
                     />
-                    <Route path="book-list/" element={<BookList />} />
-                    <Route path="book-list/:id" element={<SpecificBook />} />
+                    <Route path="books" element={<BookList />} />
+                    <Route path="books/:id" element={<SpecificBook />} />
                     <Route path="cart" element={<Cart />} />
                     <Route path="*" element={<NotFoundPage />} />
                   </Route>

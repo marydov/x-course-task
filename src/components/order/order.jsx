@@ -1,5 +1,5 @@
 import { Row, Col } from 'react-bootstrap';
-import './styles.scss';
+import './order.scss';
 
 export default function Orders({ item }) {
   return (

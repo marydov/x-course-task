@@ -15,14 +15,14 @@
 
 .header__lside {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
 }
 
 .header__rside {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   height: 100%;
   gap: $middle-m-p;

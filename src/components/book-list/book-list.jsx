@@ -6,7 +6,7 @@ import BookCard from '../book-card';
 import { User } from '../../context/use-user';
 import { Books } from '../../context/use-books';
 import magnifyingGlass from '../../images/magnifying-glass.png';
-import './styles.scss';
+import './book-list.scss';
 
 export default function BookList() {
   const userName = useContext(User);

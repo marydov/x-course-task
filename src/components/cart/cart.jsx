@@ -5,7 +5,7 @@ import { Order } from '../../context/use-order';
 import { Col, Row } from 'react-bootstrap';
 import Orders from '../order/order';
 import cart from '../../images/cart.svg';
-import './styles.scss';
+import './cart.scss';
 
 const showOrder = (order, price, count) => {
   return (
