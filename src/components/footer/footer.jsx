@@ -6,6 +6,7 @@ export default function Footer() {
         href="https://prometheus.org.ua/"
         target="_blank"
         rel="noopener noreferrer"
+        className="footer__link"
       >
         Prometheus
       </a>{' '}

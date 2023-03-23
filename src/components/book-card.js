@@ -17,7 +17,7 @@ export default function BookCard({ book }) {
             <p className="card__book-author">{book.author}</p>
             <div className="card__nav">
               <div className="card__book-price">{book.price}</div>
-              <Link key={book.id} to={`/book-list/${book.id}`}>
+              <Link key={book.id} to={`/books/${book.id}`}>
                 <button className="btn btn-light view">View</button>
               </Link>
             </div>

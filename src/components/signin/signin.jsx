@@ -6,7 +6,7 @@ export default function Signin(props) {
   const navigate = useNavigate();
 
   const changeUserNameHandler = () => {
-    navigate('/book-list');
+    navigate('/books');
     props.setUserName(props.userName);
   };
 
@@ -26,7 +26,13 @@ export default function Signin(props) {
             type="button"
             className="submit"
             defaultValue="Sign-in"
-            disabled={props.userName.length < 4 || props.userName.length > 16}
+            disabled={
+              props.userName.length < 4 ||
+              props.userName.length > 16 ||
+              props.userName === '' ||
+              props.userName === 'Username' ||
+              props.userName.includes(' ')
+            }
             onClick={changeUserNameHandler}
           />
         </div>

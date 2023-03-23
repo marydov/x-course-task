@@ -67,8 +67,6 @@ export default function Cart() {
     setOrder([]);
   };
 
-  console.log(order.length);
-
   return (
     <>
       <div className="cart__container">
@@ -81,11 +79,11 @@ export default function Cart() {
             Purchase
           </button>
         </div>
-        <main className="cart__main">
+        <div className="cart__main">
           {order.length > 0
             ? showOrder(order, total.price, total.count)
             : showNothing()}
-        </main>
+        </div>
       </div>
     </>
   );

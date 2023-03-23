@@ -56,9 +56,6 @@ export default function SpecificBook() {
     if (!isInArray) setOrder([...order, item]);
   };
 
-  console.log(bookPage);
-  console.log(order);
-
   return (
     <>
       <article className="book__page">
