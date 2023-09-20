@@ -8,39 +8,54 @@ import notFound from '../../images/imageNotFound.png';
 import './specific-book.scss';
 
 export default function SpecificBook() {
-  const userName = useContext(User);
-  const books = useContext(Books);
+  const { setUserName } = useContext(User);
+  const { books } = useContext(Books);
   const { order, setOrder } = useContext(Order);
 
   const { id } = useParams();
   const [bookPage, setBookPage] = useState({});
+  const [error, setError] = useState('');
 
   useEffect(() => {
     let bookPageData;
 
     for (let item of books) {
       if (item['id'].toString() === id) {
-        console.log(item['id']);
         bookPageData = item;
       }
     }
 
     let count = 1;
     let priceTotal = bookPageData.price;
-    console.log(bookPageData);
     setBookPage({ ...bookPageData, count, priceTotal });
   }, [books, id]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (userName === 'Username') {
+    const user = localStorage.getItem('user');
+    const person = JSON.parse(user);
+
+    if (user) {
+      setUserName(person.name);
+    } else {
       navigate('/');
     }
-  }, [navigate, userName]);
+  }, [navigate, setUserName]);
 
   const changeTotalPrice = (value) => {
-    let inputValue = value <= 0 || value > 42 || value == '' ? 1 : value;
+    let inputValue;
+    if (
+      value === '' ||
+      (value >= 0 && value <= 42 && Number.isInteger(Number(value)))
+    ) {
+      inputValue = value;
+      setError('');
+    } else {
+      inputValue = 1;
+      setError('Invalid value');
+    }
+
     setBookPage({
       ...bookPage,
       count: inputValue,
@@ -111,6 +126,7 @@ export default function SpecificBook() {
                   }}
                 />
               </span>
+              {error && <span>{error}</span>}
             </p>
             <p className="book__totalprice">
               <span>
@@ -122,6 +138,7 @@ export default function SpecificBook() {
             </p>
             <Link to={`/cart`}>
               <button
+                type="submit"
                 className="btn btn-light add__tocart"
                 onClick={() => addToOrder(bookPage)}
               >

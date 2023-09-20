@@ -9,18 +9,23 @@ import magnifyingGlass from '../../images/magnifying-glass.png';
 import './book-list.scss';
 
 export default function BookList() {
-  const userName = useContext(User);
-  const books = useContext(Books);
+  const { setUserName } = useContext(User);
+  const { books } = useContext(Books);
   const navigate = useNavigate();
 
   const [currentBooks, setCurrentBooks] = useState(books);
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    if (userName === 'Username') {
+    const user = localStorage.getItem('user');
+    const person = JSON.parse(user);
+
+    if (user) {
+      setUserName(person.name);
+    } else {
       navigate('/');
     }
-  }, [navigate, userName]);
+  }, [navigate, setUserName]);
 
   const selectableOptions = [
     { value: 'All', label: 'All' },
@@ -33,7 +38,6 @@ export default function BookList() {
     if (options.value === 'All') {
       setCurrentBooks(books);
     } else if (options.value === '0-15') {
-      console.log(options.value);
       setCurrentBooks(books.filter((el) => el.price > 0 && el.price <= 15));
     } else if (options.value === '15-30') {
       setCurrentBooks(books.filter((el) => el.price > 15 && el.price <= 30));

@@ -24,7 +24,7 @@
   padding: 10px;
 }
 
-input.submit {
+.submit {
   @include my-button;
   margin-top: $middle-m-p;
 }
@@ -32,6 +32,11 @@ input.submit {
 .submit:hover {
   background-color: #d3d4d5;
   border-color: #c6c7c8;
+}
+
+.error__message-form {
+  color: #f00;
+  font-size: 11px;
 }
 
 @media screen and (max-width: 320px) {

@@ -1,3 +1,3 @@
-import React from "react";
+import React from 'react';
 
-export const Books = React.createContext(null);
+export const Books = React.createContext({});

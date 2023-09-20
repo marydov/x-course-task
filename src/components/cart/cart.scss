@@ -7,7 +7,6 @@
 
 .cart__container {
   @include vertical-list;
-  position: relative;
 }
 
 button.purchase {

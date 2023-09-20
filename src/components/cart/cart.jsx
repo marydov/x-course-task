@@ -54,14 +54,19 @@ export default function Cart() {
     });
   }, [order]);
 
-  const userName = useContext(User);
+  const { setUserName } = useContext(User);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (userName === 'Username') {
+    const user = localStorage.getItem('user');
+    const person = JSON.parse(user);
+
+    if (user) {
+      setUserName(person.name);
+    } else {
       navigate('/');
     }
-  }, [navigate, userName]);
+  }, [navigate, setUserName]);
 
   const clearCart = () => {
     setOrder([]);
